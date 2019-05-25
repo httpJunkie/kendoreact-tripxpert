@@ -1,19 +1,30 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
 }
-p, span, h1, h2, h3, h4, h5, h6 {
+
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #222;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100vh;
 }
 
@@ -27,19 +38,23 @@ html, body {
   position: absolute;
   width: 150px;
 }
+
 .wrapper main {
   flex: 1;
-  min-height: 100vh; /* so main always takes up at least the view height */
+  min-height: 100vh;
+  /* so main always takes up at least the view height */
   background: #fff;
   box-shadow: 0 0 5px #000;
   transform: translateX(0);
   transition: transform .3s;
 }
-.wrapper.sm.closed main, 
-.wrapper.md.closed main, 
+
+.wrapper.sm.closed main,
+.wrapper.md.closed main,
 .wrapper.md.open main {
   transform: translateX(0px);
 }
+
 .wrapper.sm.open main {
   transform: translateX(150px);
 }
@@ -47,22 +62,34 @@ html, body {
 main {
   flex-direction: column;
 }
+
 main header {
   background-color: #FFF;
   height: 78px;
   display: flex;
   flex-direction: row;
 }
+
 main section {
   background-color: #F8F9FA;
   color: #222;
 }
 
-.wrapper.sm .topnav li.menu { display: auto; }
-.wrapper.md .topnav li.menu { display: none; }
+.wrapper.sm .topnav li.menu {
+  display: auto;
+}
 
-.wrapper.sm .topnav li.link { display: none; }
-.wrapper.md .topnav li.link { display: auto; }
+.wrapper.md .topnav li.menu {
+  display: none;
+}
+
+.wrapper.sm .topnav li.link {
+  display: none;
+}
+
+.wrapper.md .topnav li.link {
+  display: auto;
+}
 
 /* Home Header flex containted in the center */
 .home-header-container {
@@ -70,10 +97,14 @@ main section {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;           /* establish flex container */
-  flex-direction: column;  /* make main axis vertical */
-  justify-content: center; /* center items vertically, in this case */
-  align-items: center;     /* center items horizontally, in this case */
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* make main axis vertical */
+  justify-content: center;
+  /* center items vertically, in this case */
+  align-items: center;
+  /* center items horizontally, in this case */
   height: 442px;
 }
 
@@ -82,6 +113,7 @@ main section {
   color: #fff;
   margin-top: -4.5em;
 }
+
 .header-centered h1 {
   margin-bottom: 0.25em;
 }
@@ -101,11 +133,21 @@ main section {
 }
 
 /* swap between basic and advanced search */
-.wrapper.sm .tx-search-sm { display: auto; }
-.wrapper.md .tx-search-sm { display: none; }
+.wrapper.sm .tx-search-sm {
+  display: auto;
+}
 
-.wrapper.sm .tx-search-md { display: none; }
-.wrapper.md .tx-search-md { display: auto; }
+.wrapper.md .tx-search-sm {
+  display: none;
+}
+
+.wrapper.sm .tx-search-md {
+  display: none;
+}
+
+.wrapper.md .tx-search-md {
+  display: auto;
+}
 
 .masonry-grid {
   margin: 2em;
@@ -120,6 +162,7 @@ h1 {
   line-height: 1.2;
   color: inherit;
 }
+
 @media (min-width: 768px) {
   h1 {
     font-size: 2.5em;
@@ -137,22 +180,34 @@ h3.title {
   display: inline-block;
   position: relative;
 }
-h3.title:before{
+
+h3.title:before {
   content: "";
   position: absolute;
-  left: 40%; width: 20%;
-  bottom: -0.5em; height: 2px;
+  left: 40%;
+  width: 20%;
+  bottom: -0.5em;
+  height: 2px;
   border-bottom: 2px solid #ea0058;
 }
 
-h3.title + p {
+h3.title+p {
   margin-top: 3em;
-  margin-bottom: -1em; /* Create less space below these paragraphs */
+  margin-bottom: -1em;
+  /* Create less space below these paragraphs */
 }
 
-.text-center { text-align: center; }
-.text-muted { color: #677480; }
-.text-italic { font-style: italic; }
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #677480;
+}
+
+.text-italic {
+  font-style: italic;
+}
 
 button {
   cursor: pointer;
@@ -160,16 +215,21 @@ button {
   padding: 0.625em;
   border: none;
   border-radius: 4px;
-  background-color: rgba(83, 210, 250, 0.9); /* #53d2fa */
+  background-color: rgba(83, 210, 250, 0.9);
+  /* #53d2fa */
   color: rgb(8, 44, 54);
 }
+
 button:hover {
-  background-color: rgba(83, 210, 250, 0.5); /* #53d2fa */
-  color: rgb(8, 44, 54); /* #082c36 */
+  background-color: rgba(83, 210, 250, 0.5);
+  /* #53d2fa */
+  color: rgb(8, 44, 54);
+  /* #082c36 */
 }
 
 .hoverable {
-  cursor: pointer; cursor: hand;
+  cursor: pointer;
+  cursor: hand;
   -webkit-transition: opacity 0.15s ease-in-out;
   -moz-transition: opacity 0.15s ease-in-out;
   -ms-transition: opacity 0.15s ease-in-out;
@@ -177,6 +237,7 @@ button:hover {
   transition: opacity 0.15s ease-in-out;
   opacity: 1;
 }
+
 .hoverable:hover {
   -webkit-transition: opacity 0.15s ease-in-out;
   -moz-transition: opacity 0.15s ease-in-out;
@@ -184,4 +245,12 @@ button:hover {
   -o-transition: opacity 0.15s ease-in-out;
   transition: opacity 0.15s ease-in-out;
   opacity: 0.5;
+}
+
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.12);
+
 }
